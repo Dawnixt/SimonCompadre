@@ -120,7 +120,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Connection\clsMyConnection.cs" />
+    <Compile Include="Handlers\clsManejadoraPuntuaciones.cs" />
+    <Compile Include="Lists\clsListadoPuntuaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SimonCompadre_DAL.rd.xml" />
   </ItemGroup>
@@ -135,6 +137,7 @@
       <Name>SimonCompadre-Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

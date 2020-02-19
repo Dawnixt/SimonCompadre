@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimonCompadre_DAL
+namespace SimonCompadre_BL.Lists
 {
-    public class Class1
+    class clsListadoPuntuacionesBL
     {
     }
 }

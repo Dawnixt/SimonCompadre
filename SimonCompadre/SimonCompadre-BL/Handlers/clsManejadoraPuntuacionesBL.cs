@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimonCompadre_Entities
+namespace SimonCompadre_BL.Handlers
 {
-    public class Class1
+    class clsManejadoraPuntuacionesBL
     {
     }
 }
