@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="SimonCompadre_UI.View.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimonCompadre_UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SimonCompadre_UI.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:clsMainPageVM></vm:clsMainPageVM>
+    </Page.DataContext>
+    
+    <RelativePanel>
+        <GridView Name="Simon" Width="630" SelectedItem="{Binding Path=BotonSeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tablero, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Image Name="Color" Width="120" Margin="6" Source="{Binding Path=}"></Image>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </RelativePanel>
+</Page>
