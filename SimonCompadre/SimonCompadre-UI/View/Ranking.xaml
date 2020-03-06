@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="SimonCompadre_UI.View.Ranking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimonCompadre_UI.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <AppBarButton Name="Volver" Icon="Back" Tapped="Volver_Tapped"></AppBarButton>
+        <TextBlock x:Name="Titulo" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="40" FontStyle="Italic" Margin="0,50,0,0">RANKING</TextBlock>
+        <TextBlock  RelativePanel.AlignHorizontalCenterWithPanel="True" Name="Top"  RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="40" FontStyle="Italic" >Top 10 players</TextBlock>
+        <Grid Width="350" Name="Lista" BorderThickness="6" RelativePanel.AlignVerticalCenterWithPanel="True" BorderBrush="LightGray" Background="LightGray" RelativePanel.Below="Top" RelativePanel.AlignHorizontalCenterWithPanel="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Text="Nick" Grid.Column="0" Margin="12,0,6,0" TextAlignment="Center" FontSize="30" Foreground="Black"></TextBlock>
+            <TextBlock Grid.Row="0" Text="Tiempo" Margin="112,0,0,0" Grid.Column="1" TextAlignment="Center" FontSize="30" Foreground="Black"></TextBlock>
+            <ListView Grid.Row="1" Grid.Column="0" RelativePanel.Below="Info" Margin="0,0,0,0" Name="ListaNombres" ItemsSource="{Binding Path=ListadoPuntuaciones , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Path=Nombre}" Foreground="Black" Grid.Column="0" Margin="0,0,6,0" TextAlignment="Right" ></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView Margin="150,0,12,0" Grid.Row="1" Grid.Column="1" RelativePanel.Below="Info" Name="ListaPuntuaciones" ItemsSource="{Binding Path=ListadoPuntuaciones , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Path=Tiempo}" Foreground="Black" Grid.Column="1" TextAlignment="Left" ></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+    </RelativePanel>
+</Page>

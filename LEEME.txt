@@ -1,0 +1,2 @@
+Lo siento no he podido completar el Simon he estado liado con el resto de practicas,
+ pero se me ha ocurrido el hacer este mismo juego pero con signalR
