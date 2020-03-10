@@ -31,7 +31,7 @@ namespace SimonCompadre_DAL.Lists
                 clsPuntuaciones puntuacion;
 
                 connection = myConnection.getConnection();
-                command.CommandText = "SELECT top 10 * FROM Scores order by tiempo ";
+                command.CommandText = "SELECT top 10 * FROM PuntuacionesSimon order by puntos ";
                 command.Connection = connection;
                 reader = command.ExecuteReader();
 

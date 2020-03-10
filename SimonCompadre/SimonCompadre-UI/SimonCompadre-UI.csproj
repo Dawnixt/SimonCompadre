@@ -120,7 +120,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\clsBoton.cs" />
-    <Compile Include="ViewModel\clsMainPageVM.cs" />
+    <Compile Include="ViewModel\clsJuegoVM.cs" />
+    <Compile Include="ViewModel\clsRankingVM.cs" />
     <Compile Include="View\Juego.xaml.cs">
       <DependentUpon>Juego.xaml</DependentUpon>
     </Compile>

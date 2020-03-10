@@ -6,8 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:vm="using:SimonCompadre_UI.ViewModel"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.DataContext>
+        <vm:clsRankingVM></vm:clsRankingVM>
+    </Page.DataContext>
+    
     <RelativePanel>
         <AppBarButton Name="Volver" Icon="Back" Tapped="Volver_Tapped"></AppBarButton>
         <TextBlock x:Name="Titulo" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="40" FontStyle="Italic" Margin="0,50,0,0">RANKING</TextBlock>
@@ -31,7 +36,7 @@
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Path=Nombre}" Foreground="Black" Grid.Column="0" Margin="0,0,6,0" TextAlignment="Right" ></TextBlock>
+                            <TextBlock Text="{Binding Path=NombreJugador}" Foreground="Black" Grid.Column="0" Margin="0,0,6,0" TextAlignment="Right" ></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -44,7 +49,7 @@
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Path=Tiempo}" Foreground="Black" Grid.Column="1" TextAlignment="Left" ></TextBlock>
+                            <TextBlock Text="{Binding Path=Puntuacion}" Foreground="Black" Grid.Column="1" TextAlignment="Left" ></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

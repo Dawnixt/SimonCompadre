@@ -31,7 +31,7 @@ namespace SimonCompadre_DAL.Handlers
                 connection = new SqlConnection();
 
                 connection = myConnection.getConnection();
-                command.CommandText = "INSERT INTO dbo.Scores (nombre,tiempo) VALUES(@nombreJugador,@puntos)";
+                command.CommandText = "INSERT INTO dbo.PuntuacionesSimon (nombre,puntos) VALUES(@nombreJugador,@puntos)";
                 command.Parameters.Add("@nombreJugador", System.Data.SqlDbType.VarChar).Value = (string)puntuaciones.NombreJugador;
                 command.Parameters.Add("@puntos", System.Data.SqlDbType.VarChar).Value = (string)puntuaciones.Puntuacion;
 

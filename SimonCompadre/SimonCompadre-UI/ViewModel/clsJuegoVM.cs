@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimonCompadre_UI.ViewModel
 {
-    public class clsMainPageVM
+    public class clsJuegoVM
     {
         #region Propiedades publicas
         private clsBoton _botonSeleccionado;
@@ -17,7 +17,7 @@ namespace SimonCompadre_UI.ViewModel
         #endregion
 
         #region
-        public clsMainPageVM()
+        public clsJuegoVM()
         {
             _tablero.Add(new clsBoton("hola", "verde", 1));
             _tablero.Add(new clsBoton("hola", "rojo", 2));
@@ -73,10 +73,6 @@ namespace SimonCompadre_UI.ViewModel
             }
 
         }
-
-
-
         #endregion
-
     }
 }
