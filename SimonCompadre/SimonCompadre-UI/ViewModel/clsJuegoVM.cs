@@ -16,7 +16,7 @@ namespace SimonCompadre_UI.ViewModel
         private List<clsBoton> _orden;
         #endregion
 
-        #region
+        #region constructor
         public clsJuegoVM()
         {
             _tablero.Add(new clsBoton("hola", "verde", 1));

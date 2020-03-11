@@ -26,5 +26,11 @@ namespace SimonCompadre_UI.View
         {
             this.InitializeComponent();
         }
+
+        private void Volver_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
     }
 }

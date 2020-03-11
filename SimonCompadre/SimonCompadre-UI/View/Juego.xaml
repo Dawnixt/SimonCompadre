@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="SimonCompadre_UI.View.BlankPage1"
+    x:Class="SimonCompadre_UI.View.Juego"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SimonCompadre_UI"
+    xmlns:local="using:SimonCompadre_UI.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:SimonCompadre_UI.ViewModel"
@@ -12,14 +12,11 @@
     <Page.DataContext>
         <vm:clsJuegoVM></vm:clsJuegoVM>
     </Page.DataContext>
-    
+
     <RelativePanel>
-        <GridView Name="Simon" Width="630" SelectedItem="{Binding Path=BotonSeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tablero, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Image Name="Color" Width="120" Margin="6" Source="{Binding Path=}"></Image>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+        <Rectangle x:Name="R1" Fill="{Binding Path=}"  Width="200"></Rectangle>
+        <Rectangle Width="200" Fill="" x:Name="R2" RelativePanel.Below="R1"></Rectangle>
+        <Rectangle Width="200" x:Name="R3" RelativePanel.RightOf="R1"></Rectangle>
+        <Rectangle Width="200" x:Name="R4" RelativePanel.RightOf="R2"></Rectangle>
     </RelativePanel>
 </Page>

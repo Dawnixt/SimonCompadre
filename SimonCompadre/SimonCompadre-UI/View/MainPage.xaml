@@ -6,9 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="CornflowerBlue">
 
     <RelativePanel>
-        
+        <TextBlock x:Name="Titulo" Text="Would you kindly?" FontSize="60" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="12"></TextBlock>
+        <TextBlock x:Name="Ver" RelativePanel.AlignRightWith="Titulo"  Text="ver. Simon"  RelativePanel.Below="Titulo" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True"></TextBlock>
+        <Image RelativePanel.Below="Ver" Width="300"  RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="12" Source="ms-appx:///Assets/kisspng-free-simon-says-game-echo-simon-memory-challenge-5c02646e5f2208.9235562915436606543897.jpg" x:Name="Imagen"></Image>
+        <Button RelativePanel.AlignHorizontalCenterWithPanel="True" Name="jugar" FontSize="50" RelativePanel.Below="Imagen" Margin="25"  Tapped="BtnJugar_Click" RelativePanel.AlignVerticalCenterWithPanel="True" >Jugar</Button>
+        <Button RelativePanel.AlignHorizontalCenterWithPanel="True" Name="Ranking" FontSize="50"  RelativePanel.Below="jugar" Margin="25" Tapped="BtnRanking_Click">Ranking</Button>
     </RelativePanel>
 </Page>
